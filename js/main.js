@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initScrollAnimations();
   initSideScrollDrag();
+  initMapcnWidget();
 });
 
 /* ---------------- Sticky Header Scroll Effect ---------------- */
@@ -742,3 +743,24 @@ function initSideScrollDrag() {
     });
   });
 }
+
+/* ---------------- Mapcn Marker Tooltip Widget ---------------- */
+function initMapcnWidget() {
+  const pinTrigger = document.getElementById('mapcnPinTrigger');
+  const tooltipCard = document.getElementById('mapcnTooltipCard');
+  const closeBtn = document.getElementById('mapcnTooltipClose');
+
+  if (!pinTrigger || !tooltipCard) return;
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      tooltipCard.classList.add('minimized');
+    });
+  }
+
+  pinTrigger.addEventListener('click', () => {
+    tooltipCard.classList.toggle('minimized');
+  });
+}
+

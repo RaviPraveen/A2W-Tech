@@ -1530,6 +1530,92 @@
             </form>
           </div>
         </div>
+
+        <!-- =====================================================================
+             Interactive Location Map Card (mapcn-marker-tooltip template)
+             ===================================================================== -->
+        <div class="contact-map-wrapper reveal-on-scroll">
+          <div class="mapcn-card">
+            <!-- Header bar with live status and direct actions -->
+            <div class="mapcn-header">
+              <div class="mapcn-badge-group">
+                <div class="mapcn-marker-indicator" data-mapcn-marker="A2W tech" title="A2W tech HQ">
+                  <div class="mapcn-dot"></div>
+                  <div class="mapcn-dot-pulse"></div>
+                </div>
+                <div>
+                  <div class="mapcn-header-title">
+                    <span class="mapcn-name">A2W Tech</span>
+                    <span class="mapcn-status-pill">Official Location</span>
+                  </div>
+                  <div class="mapcn-header-meta">
+                    <span>Sri Lanka &bull; Lat 7.9152, Lng 81.5329</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mapcn-actions">
+                <a href="https://maps.google.com/?cid=17669209569766922170" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="mapcn-btn mapcn-btn-outline"
+                   title="Open in Google Maps">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Open in Maps</span>
+                </a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=7.9151808,81.5329191" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="mapcn-btn mapcn-btn-primary"
+                   title="Get Directions on Google Maps">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                  </svg>
+                  <span>Get Directions</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Responsive Map View: exact h-[420px] w-full overflow-hidden -->
+            <div class="mapcn-frame-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5130.14576349576!2d81.53291907601134!3d7.915180805426375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afad91472e63ded%3A0xf535086daad9d7ba!2sA2W%20tech!5e1!3m2!1sen!2slk!4v1789758012930!5m2!1sen!2slk" 
+                width="100%" 
+                height="420" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="A2W tech Google Maps Location">
+              </iframe>
+
+              <!-- Signature mapcn Marker & Tooltip Floating Widget -->
+              <div class="mapcn-marker-widget" id="mapcnMarkerWidget">
+                <div class="mapcn-widget-pin" id="mapcnPinTrigger" data-mapcn-marker="A2W tech" title="Click to toggle details">
+                  <div class="mapcn-pin-core"></div>
+                  <div class="mapcn-pin-pulse"></div>
+                </div>
+                <div class="mapcn-marker-tooltip-card" id="mapcnTooltipCard">
+                  <div class="mapcn-tooltip-top">
+                    <span class="mapcn-tooltip-beacon"></span>
+                    <strong class="mapcn-tooltip-name">A2W tech</strong>
+                    <span class="mapcn-tooltip-verified" title="Verified Location">✓</span>
+                    <button type="button" class="mapcn-tooltip-close" id="mapcnTooltipClose" aria-label="Minimize location tooltip">&times;</button>
+                  </div>
+                  <div class="mapcn-tooltip-desc">Software &amp; Web Development Company</div>
+                  <div class="mapcn-tooltip-tags">
+                    <span class="mapcn-tooltip-tag">Sri Lanka</span>
+                    <span class="mapcn-tooltip-tag">Global Delivery</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
