@@ -1,0 +1,305 @@
+.social-uiverse-group {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 8px 4px 28px;
+  flex-wrap: wrap;
+}
+
+.uiverse-tooltip-container {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+/* Tooltip Popup */
+.uiverse-tooltip {
+  position: absolute;
+  bottom: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px) scale(0.92);
+  transform-origin: bottom center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1000;
+  filter: drop-shadow(0 16px 36px rgba(0, 0, 0, 0.45));
+}
+
+.uiverse-tooltip-container:hover .uiverse-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.uiverse-profile {
+  background: #181A20;
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 12px 36px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 195px;
+  position: relative;
+}
+
+/* Tooltip downward pointer */
+.uiverse-profile::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 8px 0 8px;
+  border-style: solid;
+  border-color: #181A20 transparent transparent transparent;
+}
+
+.uiverse-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.uiverse-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.instagram-avatar {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tiktok-avatar {
+  background: #000000;
+  border: 1px solid #25F4EE;
+  box-shadow: 0 0 6px rgba(37, 244, 238, 0.4);
+}
+
+.facebook-avatar {
+  background: #1877F2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 6px rgba(24, 119, 242, 0.4);
+}
+
+.uiverse-details {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  overflow: hidden;
+}
+
+.uiverse-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.instagram-theme .uiverse-username {
+  font-size: 11px;
+  font-weight: 600;
+  color: #e6683c;
+}
+
+.tiktok-theme .uiverse-username {
+  font-size: 11px;
+  font-weight: 600;
+  color: #25F4EE;
+}
+
+.facebook-theme .uiverse-username {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1877F2;
+}
+
+/* QR Code Image Container */
+.uiverse-qr-wrap {
+  width: 165px;
+  height: 165px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.uiverse-qr-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
+.uiverse-about {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #94A3B8;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* 3D Isometric Layer Animation */
+.uiverse-icon {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  position: relative;
+  width: 55px;
+  height: 55px;
+}
+
+.uiverse-layer {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.uiverse-icon:hover .uiverse-layer {
+  transform: rotate(-35deg) skew(20deg);
+}
+
+.uiverse-layer span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Instagram Styles */
+.instagram-theme .uiverse-layer span {
+  border: 1.5px solid #e6683c;
+  color: #e6683c;
+}
+
+.instagram-theme .uiverse-icon:hover .uiverse-layer span {
+  box-shadow: -1.5px 1.5px 6px rgba(230, 104, 60, 0.6);
+}
+
+.instagram-theme .uiverse-label {
+  color: #e6683c;
+}
+
+.instagramSVG {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-radius: 15px;
+}
+
+/* TikTok Styles */
+.tiktok-theme .uiverse-layer span {
+  border: 1.5px solid #25F4EE;
+  color: #FE2C55;
+}
+
+.tiktok-theme .uiverse-icon:hover .uiverse-layer span {
+  box-shadow: -1.5px 1.5px 6px rgba(37, 244, 238, 0.7), 1px -1px 4px rgba(254, 44, 85, 0.6);
+}
+
+.tiktok-theme .uiverse-label {
+  color: #FE2C55;
+}
+
+.tiktokSVG {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  border-radius: 15px;
+  box-shadow: inset 0 0 0 1px rgba(37, 244, 238, 0.3);
+}
+
+/* Facebook Styles */
+.facebook-theme .uiverse-layer span {
+  border: 1.5px solid #1877F2;
+  color: #1877F2;
+}
+
+.facebook-theme .uiverse-icon:hover .uiverse-layer span {
+  box-shadow: -1.5px 1.5px 6px rgba(24, 119, 242, 0.6);
+}
+
+.facebook-theme .uiverse-label {
+  color: #1877F2;
+}
+
+.facebookSVG {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1877F2;
+  border-radius: 15px;
+}
+
+/* Stacking isometric depth */
+.uiverse-icon:hover .uiverse-layer span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.uiverse-icon:hover .uiverse-layer span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+
+.uiverse-icon:hover .uiverse-layer span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+
+.uiverse-icon:hover .uiverse-layer span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+
+.uiverse-icon:hover .uiverse-layer span:nth-child(5) {
+  opacity: 1;
+  transform: translate(20px, -20px);
+}
+
+/* Sliding down labels */
+.uiverse-label {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  opacity: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.uiverse-icon:hover .uiverse-label {
+  bottom: -32px;
+  opacity: 1;
+}
+
+/* ---------------- FAQ Section ---------------- */
